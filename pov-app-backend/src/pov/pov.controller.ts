@@ -24,7 +24,9 @@ export class PovController {
     @UseInterceptors(FileInterceptor('file'))
     async uploadFile(@UploadedFile() file: Express.Multer.File, @Body() data: CreatePovBody) {
 			try {
-				Logger.log('data', JSON.stringify(data));
+				console.log(file);
+				console.log(data);
+				fs.copyFileSync(file.path, `./uploads/${file.filename}`);	
 				const shouldGivePOV = await this.povService.shouldGivePov(data);
 				if (shouldGivePOV) {
 					await this.povService.createPov({
