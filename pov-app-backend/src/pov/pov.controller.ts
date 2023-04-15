@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Logger, NotFoundException, Param, Post, Query, UploadedFile, UseInterceptors } from '@nestjs/common';
-import { PovService } from './pov.service';
+import { CreatePovBody, PovService } from './pov.service';
 import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
 import { Express } from 'express';
 import { diskStorage } from 'multer';
@@ -22,14 +22,7 @@ export class PovController {
 
     @Post()
     @UseInterceptors(FileInterceptor('file'))
-    async uploadFile(@UploadedFile() file: Express.Multer.File, @Body() data: {
-        shouldGivePOV: boolean,
-        callbackUrl: string,
-        externalId: string,
-		hash: string,
-		lat: number,
-		long: number,
-    }) {
+    async uploadFile(@UploadedFile() file: Express.Multer.File, @Body() data: CreatePovBody) {
 			try {
 				// await axios.get(data.callbackUrl, {
 					// 		params: {
@@ -37,7 +30,7 @@ export class PovController {
 						// 				externalId: data.externalId,
 						// 		}
 						// })
-						const shouldGivePOV = data.shouldGivePOV;
+					const shouldGivePOV = await this.povService.shouldGivePov(data);
 					if (shouldGivePOV) {
 						await this.povService.createPov({
 							externalId: data.externalId,
@@ -50,7 +43,7 @@ export class PovController {
 						});
 					}
 					return {
-						pov: data.shouldGivePOV,
+						pov: shouldGivePOV,
 					};
 			} catch (error) {
 				Logger.error('Error occured while upload file', error);
