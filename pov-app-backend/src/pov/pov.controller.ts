@@ -24,27 +24,29 @@ export class PovController {
     @UseInterceptors(FileInterceptor('file'))
     async uploadFile(@UploadedFile() file: Express.Multer.File, @Body() data: CreatePovBody) {
 			try {
-				// await axios.get(data.callbackUrl, {
-					// 		params: {
-						// 				shouldGivePov: data.shouldGivePOV,
-						// 				externalId: data.externalId,
-						// 		}
-						// })
-					const shouldGivePOV = await this.povService.shouldGivePov(data);
-					if (shouldGivePOV) {
-						await this.povService.createPov({
+				Logger.log('data', JSON.stringify(data));
+				const shouldGivePOV = await this.povService.shouldGivePov(data);
+				if (shouldGivePOV) {
+					await this.povService.createPov({
+						externalId: data.externalId,
+						hash: data.hash,
+						localtion: {
+							lat: data.lat,
+							long: data.long,
+						},
+						time: new Date(),
+					});
+					console.log('###');
+					await axios.get(data.callbackUrl, {
+						params: {
+							shouldGivePov: data.shouldGivePOV,
 							externalId: data.externalId,
-							hash: data.hash,
-							localtion: {
-								lat: data.lat,
-								long: data.long,
-							},
-							time: new Date(),
-						});
-					}
-					return {
-						pov: shouldGivePOV,
-					};
+						}
+					})
+				}
+				return {
+					pov: shouldGivePOV,
+				};
 			} catch (error) {
 				Logger.error('Error occured while upload file', error);
 				throw error;
