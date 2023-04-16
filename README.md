@@ -4,3 +4,5 @@
 * pip install -r requirements.txt
 * python manage.py migrate
 * python manage.py runserver
+* Login as "asx05" and password as '1234'.
+* Or create a new user
