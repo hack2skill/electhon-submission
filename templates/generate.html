@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        nav {
+            background-color: #e7e2f5;
+            position: fixed;
+            top: 0;
+            width: 110%;
+            display: flex;
+            justify-content: space-between;
+            height: 3em;
+            margin-left: -1em;
+            padding: 1em;
+            z-index: 1;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav li {
+            margin-right: 20px;
+            font-size: 26px;
+            margin-left: 1em;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        nav li a {
+            display: block;
+            color: #7630d2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            /* background-color: #FFFFFF; */
+            color: #fefdfe;
+            background-color: #7630d2;
+            border-radius: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo1 {
+            height: 3em;
+            margin-left: 43em;
+        }
+
+        form {
+            margin-top: 5em;
+            /* margin-left: 7em; */
+            font-family: 'Poppins', sans-serif;
+        }
+
+        label {
+            font-size: 24px;
+            /* display: inline; */
+            margin-top: 3em;
+            margin-left: 26em;
+            font-weight: 500;
+        }
+
+        select {
+            display: block;
+            font-size: 26px;
+            margin-left: 24em;
+            margin-bottom: 2em;
+            width: 12.5em;
+            border-radius: 10px;
+        }
+
+        input {
+            display: block;
+            font-size: 26px;
+            margin-left: 24em;
+            margin-bottom: 2em;
+            border-radius: 10px;
+            padding: 4px;
+        }
+
+        .options {
+            background-color: #e7e2f5;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 2em;
+            padding-top: 1em;
+        }
+
+        .button-container button {
+            margin-left: 1em;
+            height: 48px;
+            width: 15em;
+            padding: 5px;
+            background-color: #9d64e8;
+            color: white;
+            border-radius: 7px;
+            font-size: 26px;
+            margin-top: 2em;
+        }
+
+        button:hover{
+            box-shadow: 5px 10px 5px black;
+            cursor: pointer;
+        }
+
+        .container{
+            /* background-color: #a87de1; */
+            margin-left: -38em;
+            margin-top: 3em;
+            padding-top: 3em;
+            padding-bottom: 3em;
+            /* background-image: url("https://justnewz.in/wp-content/uploads/2022/10/Election-Commission-of-India-logo.png"); */
+            background-repeat: no-repeat;
+            background-position: left center;
+            
+        }
+
+        #location{
+            margin-top: 2em;
+        }
+
+        /* #state{
+            margin-top: 4em;
+        } */
+        .outer-container{
+            display: flex;
+        }
+
+
+
+        #local-references{
+            margin-bottom: 4em;
+        }
+
+        /* .buttons1 button{
+            margin-left: 6.5em;
+        } */
+
+        #left-image{
+            height: 600px;
+            width: 950px;
+            margin-top: 8em;
+            /* margin-left: 1.5em; */
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="generate.html">Generate</a></li>
+            <li><img src="static/ECI.jpg" id="logo1"></li>
+        </ul>
+    </nav>
+
+    <!-- <h2>Generate from input</h2> -->
+    <form method="POST" action="{{ url_for('generate') }}">
+
+        <div class="outer-container">
+            <img src="https://justnewz.in/wp-content/uploads/2022/10/Election-Commission-of-India-logo.png" id="left-image">
+
+            <div class="container">
+
+                <label for="location" id="location" name="state">Location: </label>
+                <script src="static/cities.js"></script>
+                <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
+                <select id ="state" class="form-control" name="city" required></select>
+                <script language="javascript">print_state("sts");</script>
+    
+    
+    
+    
+                <label for="language">Language: </label>
+                <input type="text" id="language" name="language">
+    
+                <label for="religion">Religious Majority: </label>
+                <input type="text" id="religion" name="religion">
+    
+                <label for="age">Age Distribution:</label>
+                <input type="text" id="age" name="age">
+    
+                <label for="local-references">Some Local References:</label>
+                <input type="text" id="local-references" name="local-references">
+            </div>
+        </div>
+        
+
+
+        <div class="options">
+            <div class="button-container buttons1">
+                <button type="submit" name="submit-button" value="slogans">Generate Slogans</button>
+                <button type="submit" name="submit-button" value="jingles">Generate Jingles</button>
+                <!-- <button type="submit" name="submit-button" value="anthems">Generate Anthems</button> -->
+            </div>
+
+            <div class="button-container">
+                <button type="submit" name="submit-button" value="posters" >Generate Posters</button>
+                <button type="submit" name="submit-button" value="songs">Generate Songs</button>
+                <button type="submit" name="submit-button" value="hoardings">Generate Hoardings</button>
+            </div>
+        </div>
+
+
+    </form>
+
+
+
+</body>
+
+</html>
