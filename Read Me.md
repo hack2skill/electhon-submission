@@ -1,0 +1,3 @@
+- Unzip the file present on git hub
+- Download Roblox studio and player.
+- Run the .rlb file by upload it in the roblox studio
