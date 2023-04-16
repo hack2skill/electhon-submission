@@ -1,0 +1,10 @@
+@keyframes rotate {
+    0% { transform: rotate(0); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(-10deg); }
+  }
+  
+  /* Apply the animation to the image */
+  .abc{
+    animation: rotate 2s ease-in-out infinite;
+  }
