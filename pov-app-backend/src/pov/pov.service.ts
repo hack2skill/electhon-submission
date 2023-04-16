@@ -43,6 +43,7 @@ export class PovService {
 
     async shouldGivePov(data: CreatePovBody, filename: string) {
         if (await this.checkMLModel(data, filename) === false) {
+            Logger.log('No inked finger detected');
             return false;
         }
         let minDistance = 1000;
@@ -50,14 +51,17 @@ export class PovService {
             minDistance = Math.min(minDistance, this.euclidDistance(booth, { lat: data.lat, long: data.long }));
         }
         if (minDistance < 500) {
+            Logger.log('POV should be given')
             return true;
         }
+        Logger.log('Too far away from booth')
         return false;
     }
 
     async checkMLModel(data: CreatePovBody, filename: string): Promise<boolean> {
         try {
-            const response = await axios.post('https://api.ximilar.com/recognition/v2/classify', {
+            Logger.log('Check ML model start');
+            const response = await axios.post('https://api.ximilar.com/recognition/v2/classify/', {
                 task: config().ml.taskId,
                 version: '3',
                 records: [{
@@ -69,8 +73,8 @@ export class PovService {
                     "Content-Type": "application/json",
                 }
             });
-    
-            if (response?.data?.best_label?.name === "voted") {
+            Logger.log(response?.data);
+            if (response?.data?.records[0]?.best_label?.name === "voted") {
                 return true;
             }
             return false;

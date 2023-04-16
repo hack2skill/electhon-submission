@@ -24,6 +24,7 @@ export class CouponService {
         const currentCoupons = await this.getCouponOfUser(userId);
         console.log(currentCoupons);
         if (currentCoupons === null) {
+            console.log('current is null');
             return await this.couponModel.create({
                 coupons: [{
                     description: coupon.description,
@@ -34,6 +35,7 @@ export class CouponService {
             });
         }
         const exisitingCoupon = currentCoupons.coupons.find(cp => cp.id === coupon.id);
+        console.log(exisitingCoupon);
         if (exisitingCoupon === null || exisitingCoupon === undefined) {
             currentCoupons.coupons.push(coupon);
             await currentCoupons.save();
