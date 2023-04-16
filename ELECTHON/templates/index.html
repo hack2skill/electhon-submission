@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVR</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/lightslide.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="{{ url_for('static', filename='css/lightsliders.css') }}"></script>
+</head>
+
+<body>
+    <div class="scroll-up">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <!-- Nav Bar -->
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#home"><img src="{{ url_for('static', filename='css/LOGO.PNG') }}"></a></div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home section -->
+    <secton class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text1">NATIONAL VOTER SERVICE PORTAL</div>
+                <div class="text2">CAST YOUR VOTE</div>
+                <div class="text3">The Ballot is Stronger than the Bullet</div>
+                
+                <a href = "myfunction()">#LETS VOTE</a><hr>
+              
+           </div>
+        </div>
+    </secton>
+    <script src="js/script.js"></script>
+</body>
+</html>
