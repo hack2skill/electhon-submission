@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+   
+
+}
+
+.full-boxer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comment-box:hover{
+    margin-top: 12px;
+}
+
+.comment-box{
+    width: 500px;
+    background: rgb(233, 202, 146);
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 3px 25px rgba(0,0,0,0.3);
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.Profile{
+    display: flex;
+    align-items: center;
+}
+
+.profile-image{
+    width: 70px;
+    height: 70px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.Name{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.Name strong{
+    color: black;
+    font-size: 18px;
+}
+
+.Name span{
+    color: gray;
+    margin-top: 2px;
+}
+
+.comment p{
+    color: black;
+}
+h1{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    position:relative;
+    bottom:-6px;
+    vertical-align:bottom;
+}
+button {
+   
+    padding: 14px 20px;
+    box-sizing: border-box;
+    background-color: black;
+    text-align: center;
+    padding-left: 37%;
+    padding-right: 37%; 
+    margin-left: 2.9%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    margin-top: 3%;
+   
+  }
+  a{
+    text-transform: uppercase;
+    text-decoration: none;
+padding-left: 2vw;
+padding-right: 2vw;
+color: white;
+font-weight: bold;
+text-align: center;
+font-size: 150%;
+
+  }
+  
+ a #buttons{
+    text-align: center;
+    margin-left: 4%;
+ }
