@@ -1,0 +1,32 @@
+Endpoint:
+    - /api/list?type=jingles
+    - /api/list?type=posters
+
+Description: 
+- This API will make a call to the database based on the type and 
+return a list of objects back to the frontend.
+
+Output:
+{
+    "jingles":[
+        {
+            "jingleText":"",
+            "language":"",
+            "targetAudience":"",
+            "timeOfGeneration":"",
+            "numInteractions":"",
+        }
+    ]
+}
+
+{
+    "posters":[
+        {
+            "posterURL":"",
+            "language":"",
+            "targetAudience":"",
+            "timeOfGeneration":"",
+            "numInteractions":"",
+        }
+    ]
+}

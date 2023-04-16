@@ -1,0 +1,52 @@
+Endpoint:
+    - /api/generate?type=jingles
+    - /api/generate?type=posters
+
+Description: 
+- This API will generate jingles and posters for the keyword and language
+specified in the input.
+- This API doesn't do any sort of persistence and returns the data back
+to the user after fetching the data from GPT4 API
+
+Input:
+{
+    "title":"",
+    "ageGroup":"",
+    "occupation":"",
+    "demographic":"",
+    "keywords": [],
+    "language": ""
+}
+
+Output:
+{
+    "jingles":[
+        {
+            "text":"",
+            "rhymeScore":97
+        },
+        {
+            "text":"",
+            "rhymeScore":97
+        }
+    ],
+    "posters": [
+        {
+            "text":"",
+            "rhymeScore":97
+        },
+        {
+            "text":"",
+            "rhymeScore":97
+        }
+    ]
+}
+
+localhost:8080/api/generate?type=jingles
+{
+    "ageGroup":"",
+    "demographic":"",
+    "occupation":"",
+    "keywords":[],
+    "language": "hindi"
+}
