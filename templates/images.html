@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #7f44cc;
+        }
+
+        nav {
+            background-color: #e7e2f5;
+            position: fixed;
+            top: 0;
+            width: 110%;
+            display: flex;
+            justify-content: space-between;
+            height: 3em;
+            margin-left: -1em;
+            padding: 1em;
+            z-index: 1;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav li {
+            margin-right: 20px;
+            font-size: 26px;
+            margin-left: 1em;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        nav li a {
+            display: block;
+            color: #7630d2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            /* background-color: #FFFFFF; */
+            color: #fefdfe;
+            background-color: #7630d2;
+            border-radius: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo1 {
+            height: 3em;
+            margin-left: 43em;
+        }
+
+        .container {
+            display: flex;
+            margin-top: 7em;
+        }
+
+        .card {
+            height: 525px;
+            width: 400px;
+            margin-left: 5em;
+            background-color: #BBDEFF;
+            padding: 5px;
+            border-radius: 25px;
+        }
+
+        .card img {
+            height: 300px;
+            width: 350px;
+            margin-left: 2em;
+            margin-top: 2em;
+            border-radius: 5px;
+        }
+
+        .card button {
+            height: 50px;
+            width: 7em;
+            background-color: #2a60cb;
+            color: white;
+            padding: 5px;
+            font-size: 26px;
+            font-family: 'Merriweather Sans', sans-serif;
+            margin-top: 1em;
+            margin-left: 4em;
+            border-radius: 15px;
+            border: 1px solid black;
+        }
+
+        .card .variations {
+            width: 12em;
+            font-size: 22px;
+            margin-left: 3em;
+        }
+
+        .share,
+        .regenerate {
+            font-size: 26px;
+            background-color: #7630d2;
+            height: 2em;
+            padding: 5px;
+            width: 4em;
+            font-family: 'Merriweather Sans', sans-serif;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .share:hover,
+        .regenerate:hover {
+            background-color: #e7e2f5;
+            color: #7630d2;
+            cursor: pointer;
+        }
+
+        .regenerate {
+            width: 9em;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="generate.html">Generate</a></li>
+            <li><a href="images.html">View</a></li>
+            
+            <li>
+                <form action="/regenerate" method="post"><button class="regenerate">Regenerate</button></form>
+            </li>
+            <li><img src="static/ECI.jpg" id="logo1"></li>
+
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <img src="{{ img_src[0] }}">
+            <button value="share" name="submit-type" class="share">Share</button>
+            <button class="variations" value="variations" name="submit-type">Generate Variations</button>
+
+        </div>
+
+        <div class="card">
+            <img src="{{ img_src[1] }}">
+            <button value="share" name="submit-type" class="share">Share</button>
+            <button class="variations" value="variations" name="submit-type">Generate Variations</button>
+        </div>
+
+        <div class="card">
+            <img src="{{ img_src[2] }}">
+            <button value="share" name="submit-type" class="share">Share</button>
+            <button class="variations" value="variations" name="submit-type">Generate Variations</button>
+        </div>
+
+
+    </div>
+    <script>
+        // Get all the share buttons
+        const shareButtons = document.querySelectorAll('.share');
+
+        // Loop through each share button and attach a click event listener
+        shareButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Get the parent card element of the button that was clicked
+                const card = button.parentNode;
+
+                // Get the image source from the img element within the card
+                const imgSrc = card.querySelector('img').getAttribute('src');
+
+                // Copy the image source to the clipboard
+                navigator.clipboard.writeText(imgSrc).then(() => {
+                    // Display a success message to the user
+                    alert('Link copied!');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

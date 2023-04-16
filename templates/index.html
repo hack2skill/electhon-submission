@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        nav {
+            background-color: #e7e2f5;
+            position: fixed;
+            top: 0;
+            width: 110%;
+            display: flex;
+            justify-content: space-between;
+            height: 3em;
+            margin-left: -1em;
+            padding: 1em;
+            z-index: 1;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            /* overflow: hidden; */
+        }
+        
+        nav li {
+            margin-right: 20px;
+            font-size: 26px;
+            margin-left: 1em;
+            font-family: 'Merriweather Sans', sans-serif;
+            float: left;
+        }
+        
+        nav li a {
+            display: block;
+            color: #7630d2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        nav li a:hover {
+            /* background-color: #FFFFFF; */
+            color: #fefdfe;
+            background-color: #7630d2;
+            border-radius: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo1{
+            height: 3em;
+            /* margin-left: 4em; */
+        }
+
+        .logo{
+            float: right;
+            margin-left: auto;
+        }
+
+        .container{
+            display: flex;
+        }
+
+        #make-change{
+            height: 600px;
+            width: 450px;
+            transform: rotate(-7deg);
+            margin-top: 2.5em;
+            z-index: -1;
+            border-radius: 10px;
+        }
+
+        #image2{
+            height: 545px;
+            width: 650px;
+            transform: rotate(-7deg);
+            margin-top: 1.5em;
+            margin-left: 3em;
+            z-index: -1;
+            border-radius: 10px;
+        }
+
+        #logo2{
+            height: 300px;
+            width: 300px;
+            z-index: -1;
+            margin-top: 5em;
+            margin-left: 2em;
+            background: transparent;
+            border-radius: 10px;
+        }
+
+        .slant-line {
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            transform: rotate(-7deg);
+            margin-top: -62px;
+        }
+
+        .dashboard{
+            background-color: #FFFFFF;
+            z-index: 1;
+            /* transform: rotate(-7deg); */
+            margin-top: -7em;
+            width: 100%;
+            margin-right: 2em;
+            height: 20em;
+        }
+
+        .dashboard p{
+            padding: 2em;
+            font-size: 50px;
+            margin-bottom: 0em;
+            font-family: 'Poppins', sans-serif;
+            color: #7630d2;
+        }
+
+        .buttons{
+            margin-top: -4em;
+            margin-bottom: 2em;
+            margin-left: 55em;
+        }
+
+        .buttons button{
+            height: 50px;
+            width: 7em;
+            font-size: 26px;
+            margin-left: 20px;
+            background-color: #8054FF;
+            font-family: 'Merriweather Sans', sans-serif;
+            color: #FFFFFF;
+            border-radius: 5px;
+            padding: 5px;
+        }
+  
+    </style>
+
+</head>
+<body>
+    <!-- <h1>Electhon</h1> -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="generate.html">Generate</a></li>
+            <li class="logo"><img src="static/ECI.jpg" id="logo1"></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <img src="static/make-change.jpg" id="make-change">
+        <img src="static/image2.jpg" id="image2">
+        <!-- <h4>Impacting Elections through AI</h4> -->
+        <!-- <img src="static/ECI.jpg" id="logo2"> -->
+    </div>
+
+    <!-- <div class="slant-line"></div> -->
+
+    <div class="dashboard">
+        <p>Design election posters and slogans using AI</p>
+        <div class="buttons">
+            <button>SLOGANS</button>
+            <button>POSTERS</button>
+            <button>JINGLES</button>
+        </div>
+    </div>
+
+</body>
+</html>
