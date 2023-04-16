@@ -1,0 +1,93 @@
+[
+    {
+      "aadharNumber": "1234 5678 9012",
+      "mobileNumber": "+91 9876543210",
+      "voterID": "ABC1234567",
+      "otp": "123456"
+    },
+    {
+      "aadharNumber": "2345 6789 0123",
+      "mobileNumber": "+91 8765432109",
+      "voterID": "DEF2345678",
+      "otp": "456789"
+    },
+    {
+      "aadharNumber": "3456 7890 1234",
+      "mobileNumber": "+91 7654321098",
+      "voterID": "GHI3456789",
+      "otp": "789012"
+    },
+    {
+      "aadharNumber": "4567 8901 2345",
+      "mobileNumber": "+91 6543210987",
+      "voterID": "JKL4567890",
+      "otp": "234567"
+    },
+    {
+      "aadharNumber": "5678 9012 3456",
+      "mobileNumber": "+91 5432109876",
+      "voterID": "MNO5678901",
+      "otp": "678901"
+    },
+    {
+      "aadharNumber": "6789 0123 4567",
+      "mobileNumber": "+91 4321098765",
+      "voterID": "PQR6789012",
+      "otp": "123456"
+    },
+    {
+      "aadharNumber": "7890 1234 5678",
+      "mobileNumber": "+91 3210987654",
+      "voterID": "STU7890123",
+      "otp": "456789"
+    },
+    {
+      "aadharNumber": "8901 2345 6789",
+      "mobileNumber": "+91 2109876543",
+      "voterID": "VWX8901234",
+      "otp": "789012"
+    },
+    {
+      "aadharNumber": "9012 3456 7890",
+      "mobileNumber": "+91 0987654321",
+      "voterID": "YZA9012345",
+      "otp": "234567"
+    },
+    {
+      "aadharNumber": "0123 4567 8901",
+      "mobileNumber": "+91 9876543210",
+      "voterID": "BCD0123456",
+      "otp": "678901"
+    },
+    {
+      "aadharNumber": "2345 6789 0123",
+      "mobileNumber": "+91 8765432109",
+      "voterID": "EFG2345678",
+      "otp": "123456"
+    },
+    {
+      "aadharNumber": "4567 8901 2345",
+      "mobileNumber": "+91 6543210987",
+      "voterID": "HIJ4567890",
+      "otp": "456789"
+    },
+    {
+      "aadharNumber": "6789 0123 4567",
+      "mobileNumber": "+91 4321098765",
+      "voterID": "KLM6789012",
+      "otp": "789012"
+    },
+    {
+        "aadhar": "1234 5678 9012",
+        "mobile": "+91 9876543210",
+        "voterId": "ABC1234567",
+        "otp": "123456"
+      },
+      {
+        "aadhar": "2345 6789 0123",
+        "mobile": "+91 8765432109",
+        "voterId": "MNO9843210",
+        "otp": "654321"
+      }
+    ]
+  
