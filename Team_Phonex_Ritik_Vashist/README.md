@@ -3,7 +3,8 @@
 
 SaralVote - We propose an end-to-end solution to this timely issue to spread in-time awareness, streamline the voting process, and also to provide targeted encouragement for enhanced participation.
 
-
+## Team Name : _Phoenix
+## Team Leader Name & Email : Ritik Vashist ritikvashist0109@gmail.com
 
 # Problem Statement
 
@@ -30,7 +31,7 @@ How do we intend to do it?
 
 
 # Proposed Solution
-
+![image](https://user-images.githubusercontent.com/66052961/232276910-56038f60-7a73-4762-b80e-b22460fc4573.png)
 
 
 # Technology Stack 
@@ -47,7 +48,10 @@ How do we intend to do it?
 - Pandas, numpy, matplotlip and sklearn is used for handling CSV files and data analysis.
 
 # Implementation Screenshots
-
+![1](https://user-images.githubusercontent.com/66052961/232276616-7421e69e-0367-42a0-afbe-8405fd5327ea.jpg)
+![2](https://user-images.githubusercontent.com/66052961/232276619-a14f3576-be48-46a4-aebb-845165107732.jpg)
+![3](https://user-images.githubusercontent.com/66052961/232276623-cc825b4a-a3ea-472c-b304-bea8090ae74f.jpg)
+![4](https://user-images.githubusercontent.com/66052961/232276672-0c5ae9bd-018d-4150-b631-5ba8e351ff0d.jpg)
 
 
 # Step by Step Procedure to run the project on your Local Machine
