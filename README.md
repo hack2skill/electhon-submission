@@ -11,5 +11,6 @@ We have also designed a plan for efficient distrubution of generated content usi
 
 ## Code Execution Instruction:
   `pip install -r requirements.txt`
+  
   `flask run`
   
