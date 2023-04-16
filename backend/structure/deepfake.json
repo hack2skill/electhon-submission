@@ -1,0 +1,12 @@
+Endpoint:
+    - /api/genDeepFake
+
+Description: 
+- This API will generate the video and send the video back to the client
+on whatsapp.
+- This will start a lambda function that will generate the video and 
+
+Input:
+{
+    "name":"Raghav"
+}

@@ -1,0 +1,16 @@
+Trigger a Voice based call: 
+
+This will be a lambda function that will trigger a call using twilio to users phone number.
+- On the call, the basic jingle will be played
+- When the jingle is played, then a message, like, your nearest polling
+station is x kms away
+
+Trigger a WhatsApp message for jingle
+
+- Send the message
+- Send the as a audio file also.
+- Your nearest polling station is x kms away
+
+Trigger a WhatsApp message for the slogan
+- Send the message
+- Send the photo
