@@ -20,16 +20,16 @@ We devised a solution that will help user get voterID as soon as he is about to 
 ## To Install This Project Follow Below Steps 
 
 ### Requirements
--[x] Windows 11 OS
--[x] VS Code
--[x] Download below Dependencies
+- [x] Windows 11 OS
+- [x] VS Code
+- [x] Download below Dependencies
 
 ### Installation
-Clone the repository: git clone git@github.com:Coollaitar/Electhon.git
+Clone the repository: [git clone git@github.com:Coollaitar/Electhon.git](https://github.com/Coollaitar/Electhon.git)
 ### Install any required dependencies: 
 #### Frontend Dependencies : 
--[x] npm install axios react react-dom react-scripts
+- [x] npm install axios react react-dom react-scripts
 #### Backend Dependencies
--[x] npm install dotenv express body-parser twilio
+- [x] npm install dotenv express body-parser twilio
  
  Start the application: npm start
