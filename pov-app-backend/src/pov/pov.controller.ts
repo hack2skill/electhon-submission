@@ -28,7 +28,7 @@ export class PovController {
 				console.log(data);
 				fs.copyFileSync(file.path, `./uploads/${file.filename}`);
 				Logger.log('File copied');
-				const shouldGivePOV = await this.povService.shouldGivePov(data, `https://4c94-2409-40f2-1036-68a5-460-9810-95b9-908d.ngrok-free.app/uploads/${file.filename}`);
+				const shouldGivePOV = await this.povService.shouldGivePov(data, `https://28e4-2409-40f2-1039-ae05-6330-c03b-58aa-a639.ngrok-free.app/uploads/${file.filename}`);
 				Logger.log('verify POV: ', shouldGivePOV);
 				if (shouldGivePOV) {
 					await this.povService.createPov({
