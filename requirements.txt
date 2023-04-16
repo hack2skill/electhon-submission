@@ -1,0 +1,4 @@
+python-Levenshtein
+Pillow
+fuzzywuzzy
+Django==2.0.2

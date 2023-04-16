@@ -1,0 +1,23 @@
+{% extends "main/base.html" %} {% load static %} 
+
+{% block pageHeader %}
+<link rel="stylesheet" href="{% static 'main/landing.css' %}" type=text/css>
+<title>PollMitra</title> 
+{% endblock pageHeader %}
+
+{% block content %}
+{% include "main/navbar.html" %}
+<video autoplay muted loop id="myVideo">
+    <source src="{% static 'main/Indian Electoral Process demystified.mp4' %}" type="video/mp4">
+</video>
+<!-- <img src="{% static 'main/castvote.png' %}"> -->
+<div class="title">
+    <!-- <h1 class="mainlogo">PollMitra</h1> -->
+</div>
+<div class="home-content">
+    <h1>Let's find you a vote buddy</h1>
+    <a class="btn btn-success my-2 my-sm-0" href="/friends/">Find a PollMitra</a>
+    <a class="btn btn-success my-2 my-sm-0" href="/workout/">Go Vote</a>
+
+</div>
+{% endblock %}
