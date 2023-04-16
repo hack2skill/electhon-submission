@@ -1,13 +1,8 @@
-# Electhon - 2023
+### How to Execute
 
-#### Team Name -
-#### Problem Statement - 
-#### Team Leader Email -
-
-## A Brief of the Prototype:
-  What is your solution? and how it works.
-
-## Code Execution Instruction:
-  *[If your solution is **not** application based, you can ignore this para]
-  
- *The Repository must contain your **Execution Plan PDF**.
+* Make sure you use virtual-env or conda environment.
+* pip install -r requirements.txt
+* python manage.py migrate
+* python manage.py runserver
+* Login as "asx05" and password as '1234'.
+* Or create a new user
