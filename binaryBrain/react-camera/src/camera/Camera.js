@@ -93,29 +93,25 @@ class Camera extends PureComponent {
     this.setVideoStream();
   });
 
-  sendWavFiletoServer(wavFile) {
+  async sendWavFiletoServer(wavFile) {
     var formdata = new FormData();
     formdata.append("file", wavFile); 
     formdata.append("shouldGivePOV", "true")
     formdata.append("callbackUrl", "http://localhost:5000/userCoupon/callback%22" )
     formdata.append("externalId", "34535")
-    formdata.append("hash", "111")
+    formdata.append("hash", Date.now().toString())
     formdata.append("lat", "100")
     formdata.append("long", "100")
 
     // http://192.168.129.105:3000/pov
     // https://test-img.free.beeceptor.com/pov
 
-    axios.post("http://192.168.129.105:3000/pov", formdata, {
+    const response = await axios.post("https://28e4-2409-40f2-1039-ae05-6330-c03b-58aa-a639.ngrok-free.app/pov", formdata, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
     });
-
-    
-    // ajax.open("POST", "https://yourserviceurl/api/");
-    // ajax.setRequestHeader('API_SECRET', UzI1NiIsInR5cCI6IkpXVCJ9eyLCJleHAiO');
-    // ajax.send(formdata); 
+    console.log(response.data)
   }
 
   
@@ -133,7 +129,7 @@ class Camera extends PureComponent {
 
       console.log(wavefilefromblob);
       //Pass the converted file to the backend/service
-      this.sendWavFiletoServer(wavefilefromblob);
+      await this.sendWavFiletoServer(wavefilefromblob);
 
 
 
@@ -182,8 +178,8 @@ class Camera extends PureComponent {
           },        
           body: { "file": formData, 
             "shouldGivePOV": "true", 
-            "callbackUrl": "http://localhost:5000/userCoupon/callback%22", 
-            "externalId": "123", "hash": "1", "lat": "100", "long": "100" 
+            "callbackUrl": "http://localhost:5000/userCoupon/callback", 
+            "externalId": "12347", "hash": "1", "lat": "100", "long": "100" 
           }
         }
       );

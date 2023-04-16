@@ -118,26 +118,26 @@ const Image = styled.img`
   }
 `;
 
-const Link = styled.a`
-  background: white;
-  border: 1px solid ${settings.colors.text};
-  border-radius: 2px;
-  color: ${settings.colors.headings};
-  display: inline-block;
-  padding: ${settings.space / 3}px ${settings.space / 1.5}px;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+// const Link = styled.a`
+//   background: white;
+//   border: 1px solid ${settings.colors.text};
+//   border-radius: 2px;
+//   color: ${settings.colors.headings};
+//   display: inline-block;
+//   padding: ${settings.space / 3}px ${settings.space / 1.5}px;
+//   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 
-  &:hover {
-    background: ${settings.colors.text};
-    color: white;
-  }
-`;
+//   &:hover {
+//     background: ${settings.colors.text};
+//     color: white;
+//   }
+// `;
 
-const CustomCaptureButton = styled(Link)`
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-`;
+// const CustomCaptureButton = styled(Link)`
+//   border: none;
+//   cursor: pointer;
+//   font-size: 16px;
+// `;
 
 const Main = styled.section`
   padding-bottom: ${settings.space * 2}px;
