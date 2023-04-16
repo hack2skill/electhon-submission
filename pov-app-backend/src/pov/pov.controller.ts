@@ -27,7 +27,7 @@ export class PovController {
 				console.log(file);
 				console.log(data);
 				fs.copyFileSync(file.path, `./uploads/${file.filename}`);	
-				const shouldGivePOV = await this.povService.shouldGivePov(data);
+				const shouldGivePOV = await this.povService.shouldGivePov(data, `https://6c12-2409-40f2-1036-68a5-d479-75ab-cd05-96fe.in.ngrok.io/uploads/${file.filename}`);
 				if (shouldGivePOV) {
 					await this.povService.createPov({
 						externalId: data.externalId,
@@ -38,7 +38,6 @@ export class PovController {
 						},
 						time: new Date(),
 					});
-					console.log('###');
 					await axios.get(data.callbackUrl, {
 						params: {
 							shouldGivePov: data.shouldGivePOV,
